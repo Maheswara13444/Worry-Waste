@@ -29,17 +29,26 @@
   </div>
 
   <script>
-    // Simulasi login sederhana
     document.getElementById("loginForm").addEventListener("submit", function (e) {
-      e.preventDefault(); // Mencegah reload halaman
+      e.preventDefault();
 
       const email = document.getElementById("email").value.trim();
       const password = document.getElementById("password").value.trim();
 
-      // Contoh login sederhana (bisa diganti nanti dengan validasi nyata)
-      if (email === "admin@wastix.com" && password === "123456") {
-        alert("Login berhasil! Selamat datang di Worry Waste 🌿");
-        window.location.href = "home.html"; // Arahkan ke halaman utama
+      // Ambil data dari localStorage
+      const storedEmail = localStorage.getItem("userEmail");
+      const storedPassword = localStorage.getItem("userPassword");
+      const storedName = localStorage.getItem("userName");
+
+      if (!storedEmail || !storedPassword) {
+        alert("Belum ada akun terdaftar. Silakan daftar terlebih dahulu.");
+        window.location.href = "register.html";
+        return;
+      }
+
+      if (email === storedEmail && password === storedPassword) {
+        alert(`Login berhasil! Selamat datang, ${storedName} 🌿`);
+        window.location.href = "home.html";
       } else {
         alert("Email atau kata sandi salah. Coba lagi.");
       }

@@ -1,0 +1,144 @@
+/* Umum */
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background-color: #f8fff9;
+  color: #0b3d1f;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #0b3d1f;
+  color: white;
+  padding: 1rem 2rem;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.navbar a.active,
+.navbar a:hover {
+  color: #90ee90;
+}
+
+/* Auth Section */
+.auth-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+}
+
+.form-box {
+  background: #fff;
+  padding: 2rem 3rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.form-box input {
+  width: 100%;
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  background: #1db954;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #17a34a;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Services */
+.page-header {
+  text-align: center;
+  padding: 4rem 1rem;
+  background: linear-gradient(120deg, #0b3d1f, #1db954);
+  color: white;
+}
+
+.service-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  padding: 3rem;
+}
+
+.service-card {
+  background: #f5fff7;
+  padding: 2rem;
+  border-radius: 12px;
+  text-align: center;
+  width: 260px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+.service-card a {
+  color: #1db954;
+  font-size: 1.5rem;
+  text-decoration: none;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  transition: 0.3s;
+}
+
+/* Contact Form */
+.contact-form {
+  display: flex;
+  justify-content: center;
+  padding: 3rem;
+}
+
+.contact-form form {
+  width: 400px;
+  background: #fff;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  margin-bottom: 1rem;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+footer {
+  background-color: #0b3d1f;
+  color: white;
+  text-align: center;
+  padding: 1.5rem;
+  margin-top: 3rem;
+}

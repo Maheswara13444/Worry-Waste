@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Home | Worry Waste</title>
+  <style>
+    body { margin: 0; font-family: "Poppins", sans-serif; background: #f9f9f9; }
+    nav {
+      display: flex; justify-content: space-between; align-items: center;
+      background: #013220; color: white; padding: 15px 40px;
+    }
+    nav ul { list-style: none; display: flex; gap: 25px; }
+    nav a { color: white; text-decoration: none; }
+    nav a:hover { text-decoration: underline; }
+    .logout-btn {
+      background: #00b050; border: none; padding: 8px 15px;
+      border-radius: 6px; color: white; cursor: pointer;
+    }
+    .hero {
+      text-align: center; padding: 70px 20px;
+      background: linear-gradient(to right, #006400, #228b22);
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="logo">♻️ Worry Waste</div>
+    <ul>
+      <li><a href="home.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="products.html">Products</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <button class="logout-btn" onclick="logout()">Logout</button>
+  </nav>
+
+  <header class="hero">
+    <h1>Welcome to Worry Waste</h1>
+    <p>Your smart Worry Waste management partner</p>
+  </header>
+
+  <script>
+    function logout() {
+      window.location.href = "index.html";
+    }
+  </script>
+</body>
+</html>

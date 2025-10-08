@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Masuk - Worry Waste</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="auth-container">
+    <div class="form-box">
+      <h2>Selamat Datang Kembali 👋</h2>
+      <p style="margin-bottom: 1.5rem; color: #555;">Masuk ke akun Anda untuk melanjutkan</p>
+
+      <form id="loginForm">
+        <input type="email" id="email" placeholder="Email" required />
+        <input type="password" id="password" placeholder="Kata Sandi" required />
+        <button type="submit">Masuk</button>
+      </form>
+
+      <div class="form-toggle">
+        <p>Belum punya akun? <a href="register.html">Daftar sekarang</a></p>
+      </div>
+
+      <div style="margin-top: 1.5rem; font-size: 0.9rem; color: #555;">
+        <a href="#">Lupa kata sandi?</a>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Simulasi login sederhana
+    document.getElementById("loginForm").addEventListener("submit", function (e) {
+      e.preventDefault(); // Mencegah reload halaman
+
+      const email = document.getElementById("email").value.trim();
+      const password = document.getElementById("password").value.trim();
+
+      // Contoh login sederhana (bisa diganti nanti dengan validasi nyata)
+      if (email === "admin@wastix.com" && password === "123456") {
+        alert("Login berhasil! Selamat datang di Worry Waste 🌿");
+        window.location.href = "home.html"; // Arahkan ke halaman utama
+      } else {
+        alert("Email atau kata sandi salah. Coba lagi.");
+      }
+    });
+  </script>
+</body>
+</html>

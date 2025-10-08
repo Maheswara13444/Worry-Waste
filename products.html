@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Products | Worry Waste</title>
+  <style>
+    body { margin: 0; font-family: "Poppins", sans-serif; background: #f9f9f9; }
+    nav {
+      display: flex; justify-content: space-between; align-items: center;
+      background: #013220; color: white; padding: 15px 40px;
+    }
+    nav ul { list-style: none; display: flex; gap: 25px; }
+    nav a { color: white; text-decoration: none; }
+    nav a:hover { text-decoration: underline; }
+    .logout-btn { background: #00b050; border: none; padding: 8px 15px; border-radius: 6px; color: white; cursor: pointer; }
+    .content { padding: 40px; }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="logo">♻️ Worry Waste</div>
+    <ul>
+      <li><a href="home.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="products.html">Products</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <button class="logout-btn" onclick="logout()">Logout</button>
+  </nav>
+
+  <div class="content">
+    <h2>Our Products</h2>
+    <p>We offer smart bins, eco-friendly disposal kits, and waste tracking systems to make your life cleaner and greener.</p>
+  </div>
+
+  <script>
+    function logout() { window.location.href = "index.html"; }
+  </script>
+</body>
+</html>

@@ -3,14 +3,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Daftar Akun - Worry Waste</title>
+  <title>Daftar - Worry Waste</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <div class="auth-container">
     <div class="form-box">
-      <h2>Buat Akun Baru ✨</h2>
-      <p style="margin-bottom: 1.5rem; color: #555;">Gabung dan mulai kelola limbah lebih bijak!</p>
+      <h2>Buat Akun Baru ♻️</h2>
+      <p style="margin-bottom: 1.5rem; color: #555;">Daftar untuk mulai menggunakan Worry Waste</p>
 
       <form id="registerForm">
         <input type="text" id="name" placeholder="Nama Lengkap" required />
@@ -27,7 +27,6 @@
   </div>
 
   <script>
-    // Simulasi proses register
     document.getElementById("registerForm").addEventListener("submit", function (e) {
       e.preventDefault();
 
@@ -41,13 +40,13 @@
         return;
       }
 
-      if (name && email && password) {
-        alert("Pendaftaran berhasil! Silakan login.");
-        // Simulasi redirect ke halaman login
-        window.location.href = "login.html";
-      } else {
-        alert("Harap isi semua kolom dengan benar.");
-      }
+      // Simpan data ke localStorage
+      localStorage.setItem("userEmail", email);
+      localStorage.setItem("userPassword", password);
+      localStorage.setItem("userName", name);
+
+      alert("Pendaftaran berhasil! Silakan login sekarang.");
+      window.location.href = "login.html";
     });
   </script>
 </body>
